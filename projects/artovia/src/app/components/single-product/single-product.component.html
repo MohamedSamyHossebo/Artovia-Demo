@@ -1,0 +1,57 @@
+<div class="row main gy-5 mt-3">
+    <div class="col-md-12">
+        <section class="galssyHeader">
+            <div class="newBox d-flex flex-column align-items-center justify-content-center align-content-center ">
+                <h2>{{ 'product_details.title' | translate }}</h2>
+                <h4 class="fw-light">{{ 'NAVBAR.HOME' | translate }} <span class="fw-semibold">></span> {{ 'product_details.breadcrumb' | translate }}</h4>
+            </div>
+        </section>
+    </div>
+</div>
+
+@if (data) {
+<div class="container my-5">
+    <h2 class="text-center fw-bold mb-4">{{ 'product_details.our_product_details' | translate }}</h2>
+    <div class="row" *ngIf="productDetails.length">
+        <div class="col-md-12 mb-4 d-flex flex-column flex-md-row flex-sm-column justify-content-evenly align-items-center">
+            @for (img of productDetails; track img._id) {
+            <div class="product-gallery m-1 mt-5">
+                <div class="image-container" (mousedown)="startDragging($event)" (mousemove)="onDrag($event)"
+                    (mouseup)="stopDragging()" (mouseleave)="stopDragging()">
+                    <img loading="lazy" [ngSrc]="selectedImage()" width="285" height="300" class="main-image border rounded-2" 
+                        [ngStyle]="{
+                            'transform': isZoomed ? 'scale(' + zoomScale + ')' : 'scale(1)',
+                            'transform-origin': offsetX + '% ' + offsetY + '%'
+                        }" (dblclick)="toggleZoom(!isZoomed)" alt="Product Image" />
+                </div>
+                <div class="thumbnail-container">
+                    @for (image of img.images; track image._id) {
+                    <img [ngSrc]="image.secure_url" width="285" height="300" class="thumbnail" (click)="changeImage(image.secure_url)"
+                        alt="Thumbnail" />
+                    }
+                </div>
+            </div>
+            }
+            @for (item of productDetails; track $index) {
+            <div class="card border-1 rounded-1 shadow-sm product-details mt-sm-4">
+                <div class="card-body">
+                    <h3 class="fs-1 fs-md-6 fs-lg-2 title fw-bolder">{{ item.title | titlecase }}</h3>
+                    <p class="fs-5 fs-md-5 fs-lg-4 fw-light">
+                        {{ 'product_details.collection' | translate }}: <span class="text-black fw-light m-1">{{ item.subcategoryId.name | titlecase }}</span>
+                    </p>
+                    <p class="fs-5 fs-md-5 text-black">
+                        <span class="m-1 fs-4 fw-light">{{ 'product_details.description' | translate }}: </span> {{ item.description }}
+                    </p>
+                </div>
+            </div>
+            }
+        </div>
+    </div>
+</div>
+}
+
+@if (!data) {
+<div class="container my-5">
+    <h2 class="text-center text-muted emptyProduct">{{ 'product_details.product_not_found' | translate }}</h2>
+</div>
+}

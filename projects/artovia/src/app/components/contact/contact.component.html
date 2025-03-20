@@ -1,0 +1,27 @@
+<div class="container my-5 contactPage">
+    <div class="row justify-content-center">
+        <div class="contact-box text-center">
+            <img loading="lazy" src="/assets/Logo1_without_bg (1).webp" alt="Artovia Logo" class="logo">
+            <h2 class="fw-bold">{{ 'contact_page.title' | translate }}</h2>
+            <p>{{ 'contact_page.description' | translate }}</p>
+
+            <div class="contact-info">
+                <p><i class="fas fa-map-marker-alt"></i> {{ 'contact_page.address' | translate }}</p>
+                <p><i class="fas fa-phone-alt"></i> <a class="text-black" href="tel:00971501234567">{{ 'contact_page.phone' | translate }}</a></p>
+                <p><i class="fas fa-envelope"></i> <a class="text-black" href="mailto:info@artovia.com">{{ 'contact_page.email' | translate }}</a></p>
+                <p><i class="fas fa-clock"></i> {{ 'contact_page.working_hours' | translate }}</p>
+            </div>
+
+            <h4 class="fw-bold " id="follow_us_text">{{ 'contact_page.follow_us' | translate }}</h4>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/MomoSamyHossebo/" target="_blank"><i class="fab fa-facebook"></i></a>
+                <a href="https://www.facebook.com/MomoSamyHossebo/" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.facebook.com/MomoSamyHossebo/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            </div>
+
+            <button class="btn fw-bold rounded-0" [routerLink]="['/home']">
+                {{ 'not_found.back_to_home' | translate }}
+            </button>
+        </div>
+    </div>
+</div>

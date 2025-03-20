@@ -1,0 +1,125 @@
+.carousel-container {
+    background-color: #FCF8F3;
+}
+
+.container-fluid {
+    h2 {
+        font-weight: bold;
+        font-size: 2.5rem;
+    }
+
+    .card {
+        transition: transform 0.3s, box-shadow 0.3s;
+
+        &:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .position-relative {
+            .bg-danger {
+                position: absolute;
+                top: 10px;
+                left: 10px;
+                padding: 5px 10px;
+                border-radius: 5px;
+                font-weight: bold;
+            }
+        }
+
+        .card-body {
+            .card-title {
+                font-weight: bold;
+                font-size: 1.5rem;
+            }
+
+            .card-text {
+                margin: 0.5rem 0;
+            }
+        }
+    }
+
+    .text-center {
+        margin-top: 20px;
+
+        .btn {
+            border: 2px solid #B88E2F;
+            color: #B88E2F;
+            background-color: transparent;
+            padding: 10px 20px;
+            font-weight: bold;
+            transition: background-color 0.3s, color 0.3s;
+            width: 245px;
+
+            &:hover {
+                background-color: #B88E2F;
+                color: #FFF;
+            }
+        }
+    }
+
+    .btn-outline-gold {
+        border: 2px solid #B88E2F;
+        color: #B88E2F;
+        background-color: transparent;
+        padding: 10px 20px;
+        font-weight: bold;
+        transition: background-color 0.3s, color 0.3s;
+
+        &:hover {
+            background-color: #B88E2F;
+            color: #FFF;
+        }
+    }
+
+    .carousel {
+        height: 500px; // زيادة ارتفاع الكاروسيل
+    }
+
+    .carousel-caption {
+        background-color: rgba(255, 255, 255, 0.8);
+        padding: 10px;
+        border-radius: 5px;
+        color: #333;
+        text-align: left;
+        margin-bottom: 55px;
+        left: 10px;
+        width: 200px;
+        height: 100px;
+        border-radius: 0;
+
+        h5 {
+            font-weight: bold;
+        }
+    }
+
+    .carousel-inner {
+        height: 100%; // اجعل الصور تملأ الكاروسيل بالكامل
+
+        img {
+            height: 100%; // اجعل الصور تملأ الكاروسيل بالكامل
+            object-fit: cover; // لضبط الصورة داخل الإطار
+        }
+    }
+
+    .carousel-control-prev,
+    .carousel-control-next {
+        top: 80%; // تأكد من أن الأسهم في المنتصف عموديًا
+        transform: translateY(-50%);
+        width: 30px; // عرض الأسهم
+        height: 30px; // ارتفاع الأسهم
+        background-size: 20px; // حجم الأيقونة داخل السهم
+    }
+
+    .carousel-control-prev {
+        left: 10px; // المسافة من اليسار
+    }
+
+    .carousel-control-next {
+        right: 10px !important; // المسافة من اليمين
+    }
+
+    .carousel-indicators {
+        bottom: 50px; // تأكد من أن الإشارات في أسفل الكار
+    }
+}

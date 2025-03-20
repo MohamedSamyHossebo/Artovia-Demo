@@ -1,0 +1,144 @@
+.main {
+    background-image: url("/assets/scandinavian-interior-mockup-wall-decal-background 1.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 65vh !important;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    border-radius: 0;
+
+    .newBox {
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.3);
+        backdrop-filter: blur(3px);
+        -webkit-backdrop-filter: blur(3px);
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+}
+
+.container {
+    .btn {
+        border: 2px solid #B88E2F;
+        color: #B88E2F;
+        background-color: transparent;
+        padding: 10px 20px;
+        font-weight: bold;
+        transition: background-color 0.3s, color 0.3s;
+        width: 245px;
+
+        &:hover {
+            background-color: #B88E2F;
+            color: #FFF;
+        }
+    }
+}
+
+.row {
+    width: 100%;
+    height: auto;
+
+    .browseSection {
+        width: auto;
+        padding: 20px;
+
+        h1,
+        p {
+            margin: 0;
+        }
+
+        p {
+            color: #666666;
+        }
+    }
+}
+
+// Product container
+.product-details {
+
+    margin-left: 10px !important;
+
+}
+
+.product-details h3,
+.product-details h4,
+.product-details span,
+.product-details p {
+    color: #B88E2F;
+}
+
+.main-image {
+    width: 50vw;
+    height: auto;
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    display: block;
+    cursor: grab;
+}
+
+.image-container {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    max-width: 100%;
+    cursor: grab;
+
+}
+
+
+
+.image-container:active {
+    cursor: grabbing;
+}
+
+.slide-out {
+    transform: translateX(-100%);
+    opacity: 0;
+}
+
+.slide-in {
+    transform: translateX(100%);
+    opacity: 0;
+    animation: slideInAnimation 0.5s forwards;
+}
+
+@keyframes slideInAnimation {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+// thumbnails
+.thumbnail-container {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.thumbnail {
+    width: 60px;
+    height: auto;
+    cursor: pointer;
+    border: 2px solid transparent;
+}
+
+.thumbnail:hover {
+    border: 2px solid #000;
+    transition: ease-in-out 0.5s;
+}
+
+// 

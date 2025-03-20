@@ -1,0 +1,23 @@
+<div class="row main gy-5">
+    <div class="col-md-12">
+        <section>
+            <div class="newBox d-flex ms-auto border border-0 rounded-2">
+                <div class="textbox">
+                    <p class="m-3 fw-semibold">{{ 'HOME.NEW_ARRIVAL' | translate }}</p>
+                    <h1 class="m-3 fw-bold">{{ 'HOME.DISCOVER' | translate }}</h1>
+                    <h1 class="m-3 fw-bold">{{ 'HOME.NEW_COLLECTION' | translate }}</h1>
+                    <p class="m-3">{{ 'HOME.DESCRIPTION' | translate }}</p>
+                    <div class="button m-3">
+                        <button class="btn rounded-0 fw-bold" [routerLink]="['/comingsoon']">
+                            {{ 'HOME.BUY_NOW' | translate }}
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+<app-brows-cards></app-brows-cards>
+<app-cards></app-cards>
+<app-carousel></app-carousel>
+<app-grid-cards></app-grid-cards>

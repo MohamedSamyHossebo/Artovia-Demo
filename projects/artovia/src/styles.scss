@@ -1,0 +1,249 @@
+// $dark-bg: #333;
+// $dark-text: #EDEDED;
+// $dark-navbar: #1e1e1e;
+// $dark-border: #333;
+// $dark-dropdown-bg: #222;
+// $dark-hover-bg: #333;
+// $dark-primary: #D69A3C;
+
+// variables
+$dark-bg: #121212;
+$dark-text: #EDEDED;
+$dark-navbar: #1e1e1e;
+$dark-border: #333;
+$dark-dropdown-bg: #222;
+$dark-hover-bg: #333;
+$dark-primary: #D69A3C;
+
+
+body.rtl {
+    direction: rtl;
+    text-align: right;
+    font-family: "IBM Plex Sans Arabic", serif !important;
+    font-weight: 400 !important;
+    font-style: normal !important;
+
+}
+
+body.rtl .navbar-nav .nave-item {
+    flex-direction: row-reverse !important;
+}
+
+body.rtl .dropdown-menu {
+    text-align: right;
+}
+
+
+// Dark Mode
+.dark-mode {
+    background-color: $dark-bg;
+    color: $dark-primary;
+}
+
+// main texts
+.dark-mode h5,
+.dark-mode p,
+.dark-mode h3 {
+    color: $dark-text !important;
+}
+
+// navbar
+.dark-mode .navbar {
+    background-color: $dark-navbar !important;
+    border-bottom: 1px solid $dark-border !important;
+}
+
+.dark-mode .navbar hr {
+    color: $dark-text !important;
+}
+
+.dark-mode .navbar form img {
+    filter: invert(1);
+}
+
+.dark-mode a {
+    color: $dark-primary !important;
+}
+
+.dark-mode .dropdown-menu {
+    background-color: $dark-dropdown-bg !important;
+    border-color: $dark-border;
+}
+
+.dark-mode .dropdown-item {
+    color: $dark-text !important;
+}
+
+.dark-mode .dropdown-item:hover {
+    background-color: $dark-hover-bg !important;
+}
+
+body.dark-mode .nav-link::after,
+body .nav-link::after {
+    content: '';
+    height: 2px;
+    width: 0;
+    background: #B88E2F;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    transition: width 0.5s ease-in-out;
+}
+
+body.dark-mode .nav-link:hover::after {
+    width: 100%;
+
+}
+
+
+// collection component
+.dark-mode .card-body p {
+    color: $dark-text !important;
+    font-weight: bold;
+}
+
+.dark-mode .card-body span {
+    color: $dark-primary !important;
+}
+
+.dark-mode .card-body {
+    background-color: $dark-dropdown-bg !important;
+}
+
+// العناوين النصية
+.dark-mode .text h1 {
+    color: $dark-primary;
+}
+
+
+// hero section
+.dark-mode .textbox p {
+    color: $dark-navbar !important;
+}
+
+.dark-mode .galssyHeader h2,
+.dark-mode .galssyHeader h4 {
+    color: $dark-navbar;
+}
+
+// cards section
+.dark-mode #cards p {
+    color: $dark-text !important;
+}
+
+.dark-mode #cards h5 {
+    color: $dark-primary !important;
+}
+
+.dark-mode #cards {
+    background-color: $dark-dropdown-bg !important;
+}
+
+// carousel section
+.dark-mode .carouselText p {
+    color: $dark-text !important;
+}
+
+.dark-mode .carousel-inner p {
+    color: $dark-primary !important;
+
+}
+
+.dark-mode .carousel-inner h5 {
+    color: $dark-hover-bg !important;
+
+}
+
+.dark-mode .carousel-container {
+    background-color: $dark-navbar !important;
+}
+
+// grid section
+.dark-mode #gridCards h5 {
+    color: $dark-primary !important;
+}
+
+// footer section
+.dark-mode footer h6 {
+    color: $dark-text !important;
+}
+
+.dark-mode footer h5 {
+    color: $dark-primary !important;
+}
+
+.dark-mode footer span {
+    color: $dark-primary !important;
+}
+
+.dark-mode footer {
+    border-color: $dark-primary !important;
+}
+
+// singleProductComponent
+.dark-mode .product-details {
+    // border-color: $dark-primary;
+    border: none !important;
+}
+
+.dark-mode .product-details p {
+    color: $dark-primary !important;
+}
+
+.dark-mode .main-image {
+    // border-color: $dark-primary !important;
+    border: none !important;
+}
+
+.dark-mode .product-details .text-black {
+    color: $dark-text !important;
+}
+
+.dark-mode .thumbnail {
+    border: 2px solid $dark-primary !important;
+
+}
+
+.dark-mode .thumbnail:hover {
+    border: 2px solid $dark-text !important;
+}
+
+// 404 component
+.dark-mode .errorPage .coming-soon {
+    background-color: $dark-navbar;
+}
+
+// coming soon component
+.dark-mode .emptyMessage h1 {
+    color: $dark-text !important;
+}
+
+.dark-mode .emptyProduct {
+    color: $dark-text !important;
+}
+
+// allproducts
+.dark-mode .contact-info h5 {
+    color: $dark-text !important;
+}
+
+.dark-mode .contact-info #follow_us_text {
+    color: $dark-text !important;
+}
+
+.dark-mode .social-icons i {
+    color: $dark-text;
+}
+
+
+.dark-mode .contact-info p a {
+    color: $dark-primary !important;
+}
+
+.dark-mode .contact-info p {
+    color: $dark-text !important;
+}
+
+.dark-mode .contact-box {
+    background: $dark-dropdown-bg !important;
+}

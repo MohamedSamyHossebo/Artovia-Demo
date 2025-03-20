@@ -1,0 +1,150 @@
+.row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 50vh;
+    margin-top: 100px;
+    padding: 20px;
+}
+
+.contact-box {
+    max-width: 800px;
+    width: 100%;
+    padding: 40px;
+    background: white;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    text-align: center;
+}
+
+.contact-box .mission {
+    color: #B88E2F;
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+p {
+    font-size: 1rem;
+    margin-bottom: 15px;
+    color: black ;
+}
+
+.contact-info p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.contact-info i {
+    color: #B88E2F;
+    font-size: 1.2rem;
+}
+
+.logo {
+    width: 80px;
+    margin-bottom: 15px;
+}
+
+.btn {
+    border: 2px solid #B88E2F;
+    color: #B88E2F;
+    background-color: transparent;
+    padding: 10px 20px;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+    width: 100%;
+    max-width: 245px;
+}
+
+.btn:hover {
+    background-color: #B88E2F;
+    color: #FFF;
+}
+
+/* ✅ ستايل أيقونات السوشيال ميديا */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 15px;
+
+}
+
+.social-icons a {
+    font-size: 1.5rem;
+    transition: color 0.3s;
+    color: #B88E2F !important; /* اللون الأساسي */
+
+}
+
+a {
+    text-decoration: none !important;
+
+}
+
+.social-icons a:hover {
+    color: #8a6d1d !important;
+    transition: color 0.3s;
+
+}
+
+/* ✅ ميديا كويريز لضبط التصميم على الشاشات الصغيرة */
+@media (max-width: 768px) {
+    .row {
+        margin-top: 50px;
+        min-height: auto;
+    }
+
+    .contact-box {
+        width: 95%;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    p {
+        font-size: 0.95rem;
+    }
+
+    .logo {
+        width: 70px;
+    }
+}
+
+@media (max-width: 480px) {
+    .row {
+        margin-top: 30px;
+    }
+
+    .contact-box {
+        padding: 15px;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    p {
+        font-size: 0.9rem;
+    }
+
+    .logo {
+        width: 60px;
+    }
+
+    .btn {
+        padding: 8px 15px;
+        font-size: 0.9rem;
+    }
+
+    .social-icons a {
+        font-size: 1.2rem;
+    }
+}

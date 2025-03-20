@@ -1,0 +1,45 @@
+<div class="row main gy-5 mt-3">
+    <div class="col-md-12">
+        <section class="galssyHeader">
+            <div class="newBox d-flex flex-column align-items-center justify-content-center align-content-center ">
+                <h2>{{ 'subcategories.title' | translate }}</h2>
+                <h4 class="fw-light">{{ 'NAVBAR.HOME' | translate }} <span class="fw-semibold">></span> {{
+                    'subcategories.breadcrumb' | translate }}</h4>
+            </div>
+        </section>
+    </div>
+</div>
+
+<div class="container my-5">
+    <h2 class="text-center fw-bold mb-4">{{ 'subcategories.our_products' | translate }}</h2>
+    <div class="row">
+        @for (item of products; track $index) {
+        <div class="col-md-3 mb-4">
+            <div class="card position-relative border-0" [routerLink]="['/productDetails',item._id]">
+                <img loading="lazy" ngSrc="{{item.images[0].secure_url}}" width="285" height="300" class="card-img-top"
+                    alt="{{item.title}}">
+                <div class="card-body bg-body-tertiary">
+                    <h5 class="card-title">{{item.title | titlecase }}</h5>
+                    <h5 class="card-title text-dark fw-light">
+                        <span class="text-muted fw-semibold">{{ 'subcategories.collection' | translate }}:
+                        </span>{{item.subcategoryId.name | titlecase }}
+                    </h5>
+                    <p class="card-title">
+                        <span class="text-muted">{{ 'subcategories.description' | translate }}:
+                        </span>{{item.description | titlecase | slice:0:30 }}
+                    </p>
+                </div>
+            </div>
+        </div>
+        }
+        @if (!data) {
+        <div class="col-md-12 emptyMessage">
+            <h1 class="text-center text-muted">{{ 'subcategories.coming_soon' | translate }}</h1>
+            <div class="mt-3 d-flex justify-content-center">
+                <button class="btn rounded-0" [routerLink]="['/allcategories']">{{ 'subcategories.back_to_categories' |
+                    translate }}</button>
+            </div>
+        </div>
+        }
+    </div>
+</div>

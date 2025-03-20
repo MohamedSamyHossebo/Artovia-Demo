@@ -1,0 +1,70 @@
+@if (isLogin$ | async) {
+  <!-- الناف بار للشاشات الكبيرة -->
+  <nav class="nav flex-column position-fixed d-none d-lg-flex">
+    <div class="title text-center">
+      <img class="logo text-center mx-auto" src="assets/Logo1_without_bg.webp" alt="">
+      <p class="fw-bold fs-3">Artovia
+        <span class="fw-lighter text-warning">Dashboard</span>
+      </p>
+    </div>
+    <a class="nav-link fw-bold" routerLinkActive="active" [routerLink]="['/dashboard-categories']">
+      <i class="fa-solid fa-list"></i> Categories
+    </a>
+    <a class="nav-link fw-bold" routerLinkActive="active" [routerLink]="['/dashboard-sub-categories']">
+      <i class="fa-solid fa-diagram-predecessor"></i> Sub Categories
+    </a>
+    <a class="nav-link fw-bold" routerLinkActive="active" [routerLink]="['/dashboard-all-products']">
+      <i class="fa-solid fa-list-check me-2"></i> All Products
+    </a>
+    <a class="nav-link fw-bold" routerLinkActive="active" [routerLink]="['/dashboard-profile']">
+      <i class="fa-solid fa-user me-2"></i> Profile
+    </a>
+    <a class="nav-link fw-bold" routerLinkActive="active" [routerLink]="['/signup']">
+      <i class="fa-solid fa-plus"></i> Create Admin
+    </a>
+
+    <!-- Divider -->
+    <hr class="mt-auto mb-3 border-secondary opacity-50">
+
+    <a class="nav-link fw-bold text-danger" (click)="logOut()">
+      <i class="fa-solid fa-right-from-bracket me-2"></i> Sign Out
+    </a>
+  </nav>
+
+  <!-- زر لإظهار القائمة في الشاشات الصغيرة وحتى التابلت -->
+  <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileNav">
+    <i class="fa-solid fa-bars fs-2"></i>
+  </button>
+
+  <!-- الـ Offcanvas للشاشات الصغيرة وحتى التابلت -->
+  <div class="offcanvas offcanvas-start" id="mobileNav">
+    <div class="offcanvas-header ">
+      <h5 class="offcanvas-title">Menu</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+    </div>
+    <div class="offcanvas-body d-flex flex-column ">
+      <a class="nav-link fw-bold mb-4" routerLinkActive="active" [routerLink]="['/dashboard-categories']">
+        <i class="fa-solid fa-list"></i> Categories
+      </a>
+      <a class="nav-link fw-bold mb-4" routerLinkActive="active" [routerLink]="['/dashboard-sub-categories']">
+        <i class="fa-solid fa-diagram-predecessor"></i> Sub Categories
+      </a>
+      <a class="nav-link fw-bold mb-4" routerLinkActive="active" [routerLink]="['/dashboard-all-products']">
+        <i class="fa-solid fa-list-check me-2"></i> All Products
+      </a>
+      <a class="nav-link fw-bold mb-4" routerLinkActive="active" [routerLink]="['/dashboard-profile']">
+        <i class="fa-solid fa-user me-2"></i> Profile
+      </a>
+      <a class="nav-link fw-bold mb-4" routerLinkActive="active" [routerLink]="['/signup']">
+        <i class="fa-solid fa-plus"></i> Create Admin
+      </a>
+
+      <!-- Divider -->
+      <hr class="mt-auto mb-3 border-secondary opacity-50">
+
+      <a class="nav-link signOut fw-bold text-danger" (click)="logOut()">
+        <i class="fa-solid fa-right-from-bracket me-2"></i> Sign Out
+      </a>
+    </div>
+  </div>
+}

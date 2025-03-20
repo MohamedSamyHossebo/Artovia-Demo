@@ -1,0 +1,25 @@
+<div class="row main gy-5 mt-3">
+    <div class="col-md-12">
+        <section class="galssyHeader">
+            <div class="newBox d-flex flex-column align-items-center justify-content-center align-content-center ">
+                <h2>{{ 'categories.title' | translate }}</h2>
+                <h4 class="fw-light">{{ 'categories.breadcrumb' | translate }}</h4>
+            </div>
+        </section>
+    </div>
+</div>
+<div class="container my-5">
+    <h2 class="text-center fw-bold mb-4">{{ 'categories.our_categories' | translate }}</h2>
+    <div class="row">
+        @for (item of categories; track $index) {
+        <div class="col-md-3 mb-4">
+            <div class="card position-relative border-0" [routerLink]="['/specificCategory',item._id]">
+                <img ngSrc="{{item.image.secure_url}}" width="285" height="300" class="card-img-top" alt="{{ item.name }}">
+                <div class="card-body bg-body-tertiary">
+                    <h5 class="card-title">{{ item.name }}</h5>                    
+                </div>
+            </div>
+        </div>
+        }
+    </div>
+</div>

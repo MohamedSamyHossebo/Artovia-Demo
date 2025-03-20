@@ -1,0 +1,53 @@
+<!-- <div class="container my-5">
+    <h2 class="text-center fw-bold mb-4">{{ 'PRODUCT_SECTION.TITLE' | translate }}</h2>
+    <div class="row">
+        @for (item of products | slice:0:4; track $index) {
+        <div class="col-md-3 mb-4">
+            <div #cardEl class="card position-relative border-0" [routerLink]="['/productDetails',item._id]">
+                <img loading="lazy" ngSrc="{{item.images[0].secure_url}}" width="285" height="300" class="card-img-top" alt="Syltherine">
+                <div class="position-absolute sale p-2 rounded-circle top-0 end-0 m-4 opacity-50 bg-success text-white">
+                    {{ 'PRODUCT_SECTION.SALE_LABEL' | translate }}
+                </div>
+                <div class="card-body bg-body-tertiary rounded-bottom" id="cards">
+                    <h5 class="card-title">{{item.title | titlecase }}</h5>
+                    <p class="card-text">{{item.description | titlecase |slice:0:32}}</p>
+                </div>
+            </div>
+        </div>
+        }
+    </div>
+    <div class="text-center mt-4">
+        <button class="btn rounded-0 fw-semibold" [routerLink]="['/allproducts']">
+            {{ 'PRODUCT_SECTION.SHOW_MORE' | translate }}
+        </button>
+    </div>
+</div> -->
+<div class="container my-5">
+    <h2 class="text-center fw-bold mb-4">{{ 'PRODUCT_SECTION.TITLE' | translate }}</h2>
+    <div class="row">
+        <!-- نضيف ng-container عشان نتجنب تأثير الـ for loop على الهيكل -->
+        <ng-container *ngFor="let item of products | slice:0:4; let i = index">
+            <div class="col-md-3 mb-4">
+                <!-- نضيف data-index للتحكم في التأخير -->
+                <div #cardEl class="card position-relative border-0" [routerLink]="['/productDetails',item._id]"
+                    [attr.data-index]="i">
+                    <img loading="lazy" ngSrc="{{item.images[0].secure_url}}" width="285" height="300"
+                        class="card-img-top" alt="Syltherine">
+                    <div
+                        class="position-absolute sale p-2 rounded-circle top-0 end-0 m-4 opacity-50 bg-success text-white">
+                        {{ 'PRODUCT_SECTION.SALE_LABEL' | translate }}
+                    </div>
+                    <div class="card-body bg-body-tertiary rounded-bottom" id="cards">
+                        <h5 class="card-title">{{item.title | titlecase }}</h5>
+                        <p class="card-text">{{item.description | titlecase |slice:0:32}}</p>
+                    </div>
+                </div>
+            </div>
+        </ng-container>
+    </div>
+    <div class="text-center mt-4">
+        <button class="btn rounded-0 fw-semibold" [routerLink]="['/allproducts']">
+            {{ 'PRODUCT_SECTION.SHOW_MORE' | translate }}
+        </button>
+    </div>
+</div>

@@ -1,0 +1,39 @@
+.row {
+    width: 100%;
+    height: 50vh;
+
+        margin-top: 200px;
+}
+.coming-soon {
+    max-width: 600px;
+    padding: 40px;
+    background: white;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+.logo {
+    width: 100px;
+    margin-bottom: 20px;
+}
+.btn {
+    border: 2px solid #B88E2F;
+    color: #B88E2F;
+    background-color: transparent;
+    padding: 10px 20px;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+    width: 245px;
+
+    &:hover {
+        background-color: #B88E2F;
+        color: #FFF;
+    }
+}

@@ -1,0 +1,18 @@
+<div class="container my-5 errorPage">
+    <div class="row justify-content-center">
+        <div class="coming-soon text-center">
+            <img loading="lazy" src="/assets/Logo1_without_bg (1).webp" alt="Artovia Logo" class="logo">
+            <p class="fw-bold">{{ 'about_page.title' | translate }}</p>
+            <p>{{ 'about_page.description' | translate }}</p>
+            <p>{{ 'about_page.specialties' | translate }}</p>
+            <p>{{ 'about_page.quality_meets_aesthetics' | translate }}</p>
+            <h4 class="mission fw-bold">{{ 'about_page.vision' | translate }}</h4>
+            <p>{{ 'about_page.vision_text' | translate }}</p>
+            <h4 class="mission fw-bold">{{ 'about_page.mission' | translate }}</h4>
+            <p>{{ 'about_page.mission_text' | translate }}</p>
+            <button class="btn fw-bold rounded-0" [routerLink]="['/home']">
+                {{ 'not_found.back_to_home' | translate }}
+            </button>
+        </div>
+    </div>
+</div>

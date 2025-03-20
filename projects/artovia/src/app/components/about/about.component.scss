@@ -1,0 +1,104 @@
+.row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 50vh;
+    margin-top: 100px;
+    padding: 20px;
+}
+
+.coming-soon {
+    max-width: 1000px;
+    width: 100%;
+    padding: 40px;
+    background: white;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    text-align: center;
+    .mission{
+        color: #B88E2F;
+    }
+}
+
+h1 {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+p {
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
+.logo {
+    width: 80px;
+    margin-bottom: 15px;
+}
+
+.btn {
+    border: 2px solid #B88E2F;
+    color: #B88E2F;
+    background-color: transparent;
+    padding: 10px 20px;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+    width: 100%;
+    max-width: 245px;
+}
+
+.btn:hover {
+    background-color: #B88E2F;
+    color: #FFF;
+}
+
+/* ✅ ميديا كويريز لضبط التصميم على الشاشات الصغيرة */
+@media (max-width: 768px) {
+    .row {
+        margin-top: 50px;
+        min-height: auto;
+    }
+
+    .coming-soon {
+        width: 95%;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    p {
+        font-size: 0.95rem;
+    }
+
+    .logo {
+        width: 70px;
+    }
+}
+
+@media (max-width: 480px) {
+    .row {
+        margin-top: 30px;
+    }
+
+    .coming-soon {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    p {
+        font-size: 0.9rem;
+    }
+
+    .logo {
+        width: 60px;
+    }
+
+    .btn {
+        padding: 8px 15px;
+        font-size: 0.9rem;
+    }
+}

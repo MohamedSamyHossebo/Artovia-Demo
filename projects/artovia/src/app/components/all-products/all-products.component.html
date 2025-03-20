@@ -1,0 +1,82 @@
+<!-- Header -->
+<div class="row main gy-5 mt-3">
+    <div class="col-md-12">
+        <section class="galssyHeader">
+            <div class="newBox d-flex flex-column align-items-center justify-content-center align-content-center">
+                <h2>{{ 'products.title' | translate }}</h2>
+                <h4 class="fw-light">{{ 'products.breadcrumb' | translate }}</h4>
+            </div>
+        </section>
+    </div>
+</div>
+
+<!-- Filter Bar -->
+<!-- <div class="filter-bar d-flex align-items-center justify-content-between p-2 sticky-top border-0 shadow-lg"
+    style="top: 85px; z-index: 1020;">
+    <div class="d-flex align-items-center">
+        <a class="me-2 text-black" (click)="toggleFilterSidebar()">
+            <i class="fas fa-sliders-h m-2"></i>{{ 'products.filter' | translate }}
+        </a>
+        <span class="ms-3">{{ 'products.showing_results' | translate }} <span>32</span> {{ 'products.results' | translate }}</span>
+    </div>
+
+    <div class="d-flex align-items-center">
+        <label class="me-2">{{ 'products.sort_by' | translate }}</label>
+        <select class="form-select" style="width: 120px;">
+            <option selected>{{ 'products.default' | translate }}</option>
+        </select>
+    </div>
+</div> -->
+
+<!-- Filter Sidebar -->
+<!-- <div class="filter-sidebar" *ngIf="isFilterOpen">
+    <div class="filter-header d-flex justify-content-between p-3">
+        <h5>{{ 'products.filter_products' | translate }}</h5>
+        <button class="btn btn-close" (click)="toggleFilterSidebar()"></button>
+    </div>
+    <div class="filter-body text-center p-3">
+        <h6>
+            <button class="btn btn-link text-dark text-decoration-none" type="button" data-bs-toggle="collapse"
+                data-bs-target="#categoryList">
+                {{ 'products.category' | translate }} <i class="fas fa-chevron-down"></i>
+            </button>
+        </h6>
+        <div id="categoryList" class="collapse">
+            <ul class="list-unstyled">
+                <li *ngFor="let item of categories" (click)="filterByCategory(item._id)">
+                    {{ item.name }}
+                </li>
+                <li class="fw-bold mt-2" (click)="resetFilter()">{{ 'products.show_all' | translate }}</li>
+            </ul>
+        </div>
+    </div>
+</div> -->
+
+<!-- Overlay -->
+<!-- <div class="filter-overlay" *ngIf="isFilterOpen" (click)="toggleFilterSidebar()"></div> -->
+
+<!-- Product Cards -->
+<div class="container my-5">
+    <h2 class="text-center fw-bold mb-4">{{ 'products.our_products' | translate }}</h2>
+    <div class="row">
+        @for (item of filteredProducts | slice:0:count*5; track $index) {
+        <div class="col-md-3 mb-4">
+            <div class="card position-relative border-0" [routerLink]="['/productDetails',item._id]">
+                <img loading="lazy" ngSrc="{{item.images[0].secure_url}}" width="285" height="300" class="card-img-top" alt="{{ item.title }}">
+                <div class="position-absolute sale p-2 rounded-circle top-0 end-0 m-4 opacity-50 bg-success text-white">
+                    {{ 'products.new' | translate }}
+                </div>
+                <div class="card-body productsBody bg-body-tertiary">
+                    <h5 class="card-title">{{ item.title | titlecase }}</h5>
+                    <p class="card-text">{{ item.description | titlecase |slice:0:32  }}</p>
+                </div>
+            </div>
+        </div>
+        }
+    </div>
+    <div class="text-center mt-4">
+        <button class="btn rounded-0 fw-semibold" *ngIf="count*4 < products.length" (click)="count = count + 1">
+            {{ 'products.show_more' | translate }}
+        </button>
+    </div>
+</div>

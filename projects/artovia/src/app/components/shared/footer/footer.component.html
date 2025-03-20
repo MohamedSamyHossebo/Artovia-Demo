@@ -1,0 +1,39 @@
+<footer class="footer mt-5 border-top bottom-0">
+    <div class="container py-4">
+        <div class="row">
+            <!-- القسم الأول: اسم الشركة والعنوان -->
+            <div class="col-md-4">
+                <h5 class="fw-bold">{{ 'footer.company_name' | translate }}</h5>
+                <p class="text-muted">{{ 'footer.address' | translate }}</p>
+                <p><span class="fw-bold">{{ 'footer.contact_number' | translate }} </span>{{ 'footer.phone' | translate }}</p>
+            </div>
+
+            <!-- القسم الثاني: الروابط -->
+            <div class="col-md-2">
+                <ul class="list-unstyled ">
+                    <li class="m-3"><a [routerLink]="['/home']" class="text-dark text-decoration-none">{{ 'footer.home' | translate }}</a></li>
+                    <li class="m-3"><a [routerLink]="['/allproducts']" class="text-dark text-decoration-none">{{ 'footer.product' | translate }}</a></li>
+                    <li class="m-3"><a [routerLink]="['/allcategories']" class="text-dark text-decoration-none">{{ 'footer.categories' | translate }}</a></li>
+                    <li class="m-3"><a [routerLink]="['/comingsoon']" class="text-dark text-decoration-none">{{ 'footer.contact' | translate }}</a></li>
+                </ul>
+            </div>
+
+            <!-- القسم الثالث: المساعدة -->
+            <div class="col-md-2">
+                <ul class="list-unstyled">
+                    <li class="m-3"><a [routerLink]="['/comingsoon']" class="text-dark text-decoration-none">{{ 'footer.payment_options' | translate }}</a></li>
+                    <li class="m-3"><a [routerLink]="['/comingsoon']" class="text-dark text-decoration-none">{{ 'footer.returns' | translate }}</a></li>
+                    <li class="m-3"><a [routerLink]="['/comingsoon']" class="text-dark text-decoration-none">{{ 'footer.privacy_policies' | translate }}</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- الحقوق -->
+        <div class="row mt-4">
+            <div class="col text-center text-muted">
+                <hr>
+                <p class="mb-0">{{ 'footer.copyright' | translate }}</p>
+            </div>
+        </div>
+    </div>
+</footer>

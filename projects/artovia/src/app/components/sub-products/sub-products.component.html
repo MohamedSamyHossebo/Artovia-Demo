@@ -1,0 +1,40 @@
+<div class="row main gy-5 mt-3">
+    <div class="col-md-12">
+        <section class="galssyHeader">
+            <div class="newBox d-flex flex-column align-items-center justify-content-center align-content-center">
+                <h2>{{ 'products.title' | translate }}</h2>
+                <h4 class="fw-light">{{ 'products.breadcrumb' | translate }}</h4>
+            </div>
+        </section>
+    </div>
+</div>
+<div class="container my-5">
+    <h2 class="text-center fw-bold mb-4">{{ 'products.our_products' | translate }}</h2>
+    <div class="row">
+        @for (item of subProducts; track $index) {
+        <div class="col-md-3 mb-4">
+            <div class="card position-relative border-0" [routerLink]="['/productDetails',item._id]">
+                <img loading="lazy" ngSrc="{{item.images[0].secure_url}}" width="285" height="300" class="card-img-top"
+                    alt="{{ item.title }}">
+                <div class="position-absolute sale p-2 rounded-circle top-0 end-0 m-4 opacity-50 bg-success text-white">
+                    {{ 'products.new' | translate }}
+                </div>
+                <div class="card-body productsBody bg-body-tertiary">
+                    <h5 class="card-title">{{ item.title | titlecase }}</h5>
+                    <p class="card-text">{{ item.description | titlecase }}</p>
+                </div>
+            </div>
+        </div>
+        }
+    </div>
+    <div class="text-center mt-4">
+        <button class="btn rounded-0 fw-semibold" *ngIf="count*4 < subProducts.length" (click)="count = count + 1">
+            {{ 'products.show_more' | translate }}
+        </button>
+    </div>
+    @if (!data) {
+        <div class="container my-5">
+            <h2 class="text-center text-muted emptyProduct">{{ 'product_details.product_not_found' | translate }}</h2>
+        </div>
+        }
+</div>

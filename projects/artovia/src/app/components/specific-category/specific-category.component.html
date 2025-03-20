@@ -1,0 +1,33 @@
+<div class="row main gy-5 mt-3">
+    <div class="col-md-12">
+        <section class="galssyHeader">
+            <div class="newBox d-flex flex-column align-items-center justify-content-center align-content-center ">
+                <h2>{{ 'collections.title' | translate }}</h2>
+                <h4 class="fw-light">{{ 'NAVBAR.HOME' | translate }} <span class="fw-semibold">></span> {{ 'collections.breadcrumb' | translate }}</h4>
+            </div>
+        </section>
+    </div>
+</div>
+
+<div class="container my-5">
+    <h2 class="text-center fw-bold mb-4">{{ 'collections.our_collections' | translate }}</h2>
+    <div class="row">
+        @for (item of subCategoryDetails; track $index) {
+        <div class="col-md-3 mb-4">
+            <div class="card position-relative border-0" [routerLink]="['/specificSubCategory',item._id]">
+                <img loading="lazy" ngSrc="{{item.image.secure_url}}" width="285" height="300"  class="card-img-top"
+                    alt="{{ item.name }}">
+                <div class="card-body bg-body-tertiary">
+                    <h5 class="card-title">{{item.name}}</h5>
+                </div>
+            </div>
+        </div>
+        }
+        <div class="col-md-12 emptyMessage" *ngIf="!data">
+            <h1 class="text-center text-muted">{{ 'collections.coming_soon' | translate }}</h1>
+            <div class="mt-3 d-flex justify-content-center ">
+                <button class="btn rounded-0 " [routerLink]="['/allcategories']">{{ 'collections.back_to_categories' | translate }}</button>
+            </div>
+        </div>
+    </div>
+</div>

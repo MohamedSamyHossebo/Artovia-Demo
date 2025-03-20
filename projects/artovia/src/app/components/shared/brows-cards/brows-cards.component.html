@@ -1,0 +1,24 @@
+<div class="row g-0">
+    <div class="col-md-12">
+        <div class="browseSection text-center">
+            <div class="text mt-5">
+                <h1>{{ 'BROWSE_SECTION.TITLE' | translate }}</h1>
+                <p class="mt-1">{{ 'BROWSE_SECTION.DESCRIPTION' | translate }}</p>
+            </div>
+            <div class="collections mt-5 d-flex justify-content-center align-content-center align-items-center ">
+                @for (item of categories | slice:0:3; track $index) {
+                <div #cardElement class="card m-3 border-0 " style="width: 18rem;" [routerLink]="['/specificCategory',item._id]">
+                    <div class="image-wrapper">
+                        <img loading="lazy" ngSrc={{item.image.secure_url}} class="card-img-top"
+                            alt="browsing Collections" width="285" height="300">
+                    </div>
+                    <div class="card-body rounded-0">
+                        <p class="card-text text-black fw-semibold ">{{ item.name }}</p>
+                    </div>
+                </div>
+
+                }
+            </div>
+        </div>
+    </div>
+</div>

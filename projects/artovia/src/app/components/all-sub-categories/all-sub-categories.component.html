@@ -1,0 +1,30 @@
+<div class="row main gy-5 mt-3">
+    <div class="col-md-12">
+        <section class="galssyHeader">
+            <div class="newBox d-flex flex-column align-items-center justify-content-center align-content-center">
+                <h2>{{ 'sub_categories.title' | translate }}</h2>
+                <h4 class="fw-light">{{ 'NAVBAR.HOME' | translate }} <span class="fw-semibold">></span> {{ 'sub_categories.breadcrumb' | translate }}</h4>
+            </div>
+        </section>
+    </div>
+</div>
+
+<div class="container my-5">
+    <h2 class="text-center fw-bold mb-4">{{ 'sub_categories.our_sub_categories' | translate }}</h2>
+    <div class="row">
+        @for (item of subCategories; track $index) {
+            <div class="col-md-3 mb-4">
+                <div class="card position-relative border-0" [routerLink]="['/subProducts',item._id]">
+                    <img ngSrc="{{item.image.secure_url}}" width="285" height="300" class="card-img-top"
+                        alt="{{ 'sub_categories.subcategory_image' | translate }}">
+                    <div class="card-body bg-body-tertiary">
+                        <h5 class="card-title text-start">
+                            <span class="text-muted">{{ 'sub_categories.category' | translate }}</span> {{ item.categoryId.name }}
+                        </h5>                    
+                        <h5 class="card-title text-start">{{ item.name }}</h5> 
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>

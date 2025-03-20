@@ -1,0 +1,91 @@
+<h1 class="text-center mt-1 text-light fw-lighter">Add Sub Category</h1>
+
+<form [formGroup]="form">
+    <div class="box d-flex justify-content-center align-items-center align-content-center">
+        <div class="productImageUrl">
+            <div>
+                <div class="card text-center " style="width: 25rem;">
+                    <div class="card-body ">
+                        <label class="form-label text-dark fw-light text-center">Choose SubCategory Image </label>
+                        <input id="categoryImage" formControlName="imageFile" accept="image/*" class="form-control form-control-sm m-1"
+                            type="file" (change)="onFileSelected($event)">
+                        <label for="category" class="my-1 text-dark fw-light"> Select Category
+                        </label>
+                        <select  class="form-control form-select m-auto mb-2" formControlName="categorySelection">
+                            <option  [disabled]="true" class="fw-light">All Categories</option>
+                            @for (item of _sortInput; track item) {
+                            <option [value]="item._id" class="fw-light">{{ item.name }}</option>
+                            }
+                        </select>
+                        <label for="form-label text-dark fw-light text-center"> Add SubCatgeory Name</label>
+                        <div class="form-floating">
+                            <input formControlName="subCategoryName" type="text" class="form-control m-auto"
+                            id="floatingInput" placeholder="categoryName">
+                            <label for="floatingInput">SubCatgeory Name</label>
+                        </div>
+                        <div class="mt-2">
+                            <button [disabled]="!form.valid"  type="submit" (click)="UpdateSubCategory()"
+                            class="btn btn-sm btn-dark text-white m-1 rounded-0">UPDATE </button>
+                            <button [disabled]="!form.valid" type="submit" (click)="addSubCategory()"
+                                class="btn btn-sm btn-warning text-white m-1  rounded-0">ADD </button>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+<h1 class="text-center mt-1 text-light fw-lighter">All Sub Categories</h1>
+<!-- <div class="row">
+    @for (item of subCategories; track item.id) {
+    <div class="col-md-3 gy-5">
+        <div class="card d-flex justify-content-center align-content-center align-items-center">
+            <img src="{{item.image.secure_url}}" class="card-img-top " style="height: 250px; width: 250px;" alt="...">
+            <div class="card-body text-center">
+                <h5 class="card-title fw-light fs-5 badge bg-warning text-white m-1">SubCategory # {{item.name}}</h5>
+                <h5 class="card-title fw-light fs-5 badge bg-warning text-white m-1"><span
+                        class="fw-bold">Category # {{item.categoryId.name}}</span>
+                </h5>
+                <div class="">
+                    <button (click)="deleteSubCategory(item._id)"
+                        class="btn btn-outline-danger rounded-0 m-1">Delete</button>
+                    <button (click)="editeSubCategory(item)" class="btn btn-outline-dark rounded-0 m-1">Edite</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    }
+
+</div> -->
+<div class="row">
+    @for (item of subCategories; track item.id) {
+    <div class="col-lg-3 col-md-4 col-sm-6 col-12 gy-4">
+        <div class="card shadow-sm border-0">
+            <div class="image-container">
+                <img src="{{item.image.secure_url}}" class="card-img-top" alt="Subcategory Image">
+            </div>
+            <div class="card-body text-center">
+                <h5 class="card-title badge bg-warning text-white">SubCategory # {{item.name}}</h5>
+                <h5 class="card-title badge bg-warning text-white">
+                    <span class="fw-bold">Category # {{item.categoryId.name}}</span>
+                </h5>
+                <div class="mt-2">
+                    <button (click)="deleteSubCategory(item._id)" class="btn btn-outline-danger rounded-0 m-1">
+                        Delete
+                    </button>
+                    <button (click)="editeSubCategory(item)" class="btn btn-outline-dark rounded-0 m-1">
+                        Edit
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    }
+</div>
+
+
+<div class="text-center" *ngIf="isLoading$ | async">
+    <app-spinner></app-spinner>
+</div>

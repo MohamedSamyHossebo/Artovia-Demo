@@ -1,0 +1,68 @@
+.container {
+    .btn {
+        border: 2px solid #B88E2F;
+        color: #B88E2F;
+        background-color: transparent;
+        padding: 10px 20px;
+        font-weight: bold;
+        transition: background-color 0.3s, color 0.3s;
+        width: 245px;
+
+        &:hover {
+            background-color: #B88E2F;
+            color: #FFF;
+        }
+    }
+}
+
+.row {
+    width: 100%;
+    height: auto;
+
+    .browseSection {
+        width: auto;
+        padding: 20px;
+
+        h1,
+        p {
+            margin: 0;
+        }
+
+        p {
+            color: #666666;
+        }
+    }
+
+}
+
+// انيميشن 
+.card {
+    cursor: pointer;
+    opacity: 0;
+    &:hover {
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        transition:all 0.3s ease-in-out !important;
+    }
+    &.animate {
+        animation: slideFromLeft 0.8s forwards ease-out;
+    }
+
+    // تطبيق تأخير مختلف لكل كارد
+    @for $i from 0 through 4 {
+        &[data-index="#{$i}"].animate {
+            animation-delay: #{$i * 0.3}s;
+        }
+    }
+}
+
+@keyframes slideFromLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}

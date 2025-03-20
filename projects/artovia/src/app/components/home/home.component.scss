@@ -1,0 +1,99 @@
+.main {
+    background-image: url("/assets/scandinavian-interior-mockup-wall-decal-background 1.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh !important;
+    display: flex;
+    align-items: center; /* توسيط عمودي */
+}
+
+.newBox {
+    width: 90%;
+    max-width: 600px;
+    height: auto;
+    background-color: #FFF3E3;
+    color: #B88E2F;
+    padding: 20px;
+    position: relative;
+    .textbox {
+                    p {
+                        color: #333333;
+                    }        
+                    .btn {
+                        background-color: #B88E2F;
+                        color: #FFF3E3;
+                        width: 100%;
+                        height: 60px;
+                        max-width: 150px;
+                        margin: 0 auto;
+                    }
+                }
+}
+/* ✅ في الشاشات الكبيرة (يبقى في اليمين) */
+@media (min-width: 992px) {
+    .newBox {
+        margin-left: auto;
+        margin-right: 110px;
+    }
+}
+
+/* ✅ في الشاشات المتوسطة */
+@media (max-width: 991px) {
+    .newBox {
+        margin-right: 50px;
+        /* تقليل المسافة من اليمين */
+    }
+}
+
+/* ✅ في الشاشات الصغيرة (يبقى في المنتصف) */
+@media (max-width: 768px) {
+    .newBox {
+        margin: 10vh auto;
+        /* توسيط الكارد */
+        text-align: center;
+        
+    }
+}
+
+/* ✅ تحسين النصوص والأزرار في الشاشات الصغيرة */
+@media (max-width: 576px) {
+    .textbox h1 {
+        font-size: 1.5rem;
+        /* تصغير العناوين */
+    }
+
+    .btn {
+        width: 100%;
+        /* جعل الزر بكامل العرض */
+    }
+}
+
+// 
+// Media Queries
+// @media (max-width: 768px) {
+//     .newBox {
+//         width: 95%;
+//         margin-top: 100px;
+//     }
+
+//     .browseSection {
+//         text-align: center;
+//     }
+// }
+
+// @media (max-width: 576px) {
+//     .newBox {
+//         margin-top: 50px;
+//     }
+
+//     .carousel-control-prev {
+//         display: none;
+//     }
+
+//     .carousel-control-next {
+//         display: none; // المسافة من اليمين
+//     }
+
+// }
