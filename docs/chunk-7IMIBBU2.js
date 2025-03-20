@@ -1,1 +1,0 @@
-import{a as n}from"./chunk-O7CTI5VS.js";import{$ as o,c as e,d as i}from"./chunk-OIDONPLT.js";var f=(()=>{class t{constructor(r){this._http=r}getAllCategory(){return this._http.get(n.baseApi)}static{this.\u0275fac=function(a){return new(a||t)(i(o))}}static{this.\u0275prov=e({token:t,factory:t.\u0275fac,providedIn:"root"})}}return t})();export{f as a};
