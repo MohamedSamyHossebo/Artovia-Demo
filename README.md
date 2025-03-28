@@ -1,5 +1,4 @@
 # ArtoviaApp
-
 ## Overview
 ArtoviaApp is an e-commerce platform built using **Angular 17** and **Bootstrap 5**, featuring bilingual support (Arabic & English) and dark mode functionality for an enhanced user experience.
 
@@ -51,7 +50,13 @@ ArtoviaApp
 - **TranslateModule**: Multi-language support.
 - **NgOptimizedImage**: Image optimization.
 - **ActivatedRoute & RouterLink**: Routing and navigation.
-
+![Angular](https://img.shields.io/badge/Angular-17.3.11-red?style=for-the-badge&logo=angular&logoColor=white)
+![Bootstrap](https://img.shields.io/badge/Bootstrap-5-blueviolet?style=for-the-badge&logo=bootstrap&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-4.8.4-blue?style=for-the-badge&logo=typescript&logoColor=white)
+![JWT](https://img.shields.io/badge/JWT-black?style=for-the-badge&logo=jsonwebtokens&logoColor=white)
+![RxJS](https://img.shields.io/badge/RxJS-red?style=for-the-badge&logo=reactivex&logoColor=white)
+![FontAwesome](https://img.shields.io/badge/FontAwesome-339AF0?style=for-the-badge&logo=fontawesome&logoColor=white)
+![Ngx-cookie-service](https://img.shields.io/badge/Ngx--cookie--service-lightgrey?style=for-the-badge)
 ---
 
 ## Features
