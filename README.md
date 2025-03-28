@@ -50,6 +50,7 @@ ArtoviaApp
 - **TranslateModule**: Multi-language support.
 - **NgOptimizedImage**: Image optimization.
 - **ActivatedRoute & RouterLink**: Routing and navigation.
+---
 ![Angular](https://img.shields.io/badge/Angular-17.3.11-red?style=for-the-badge&logo=angular&logoColor=white)
 ![Bootstrap](https://img.shields.io/badge/Bootstrap-5-blueviolet?style=for-the-badge&logo=bootstrap&logoColor=white)
 ![TypeScript](https://img.shields.io/badge/TypeScript-4.8.4-blue?style=for-the-badge&logo=typescript&logoColor=white)
