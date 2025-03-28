@@ -1,7 +1,7 @@
 # ArtoviaApp
 ## Used By
 
-This project is used by the following companies:
+This project is used by the following company:
 
 - Artovia Technical Services L.L.C, based in Dubai, UAE, specializing in Contracting, Decor, and Interior Designs Solutions.
 ## Overview
