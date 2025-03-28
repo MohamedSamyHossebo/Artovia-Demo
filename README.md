@@ -1,4 +1,9 @@
 # ArtoviaApp
+## Used By
+
+This project is used by the following companies:
+
+- Artovia Technical Services L.L.C, based in Dubai, UAE, specializing in Contracting, Decor, and Interior Designs Solutions.
 ## Overview
 ArtoviaApp is an e-commerce platform built using **Angular 17** and **Bootstrap 5**, featuring bilingual support (Arabic & English) and dark mode functionality for an enhanced user experience.
 
