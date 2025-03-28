@@ -1,27 +1,97 @@
 # ArtoviaApp
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.11.
+## Overview
+ArtoviaApp is an e-commerce platform built using **Angular 17** and **Bootstrap 5**, featuring bilingual support (Arabic & English) and dark mode functionality for an enhanced user experience.
 
-## Development server
+---
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Project Structure
 
-## Code scaffolding
+```plaintext
+ArtoviaApp
+├── /src
+│   ├── /app
+│   │   ├── /components
+│   │   ├── /services
+│   │   │   ├── /categoriesService
+│   │   │   ├── /darkMode
+│   │   │   ├── /product
+│   │   │   ├── /productsService
+│   │   │   └── /subCategoryService
+│   │   ├── app.component.html
+│   │   ├── app.component.scss
+│   │   ├── app.component.spec.ts
+│   │   ├── app.component.ts
+│   │   ├── app.config.ts
+│   │   └── app.routes.ts
+│   ├── /assets
+│   ├── favicon.ico
+│   ├── index.html
+│   ├── main.ts
+│   └── styles.scss
+├── angular.json
+├── package.json
+└── README.md
+```
 
+---
+
+## Technologies & Tools
+
+- **Angular 17**: Framework for building dynamic web applications.
+- **Angular Workspace**: Modular project structure.
+- **Standalone Components**: Improved modularity and performance.
+- **Bootstrap 5**: Responsive design framework.
+- **TypeScript**: Strongly typed programming language.
+- **RxJS**: Reactive programming library.
+- **HTTP Client Module**: Efficient HTTP requests.
+- **JWT (JSON Web Tokens)**: Secure authentication.
+- **Ngx-cookie-service**: Cookie management.
+- **FontAwesome**: Icon integration.
+- **TranslateModule**: Multi-language support.
+- **NgOptimizedImage**: Image optimization.
+- **ActivatedRoute & RouterLink**: Routing and navigation.
+
+---
+
+## Features
+
+- **JWT Authentication**: Secure login system.
+- **Product Management**: Dynamic listing and filtering.
+- **Responsive Design**: Mobile-first approach.
+- **Dark Mode**: Theme toggle feature.
+- **Multi-language Support**: Arabic & English.
+- **Lazy Loading**: Optimized performance.
+
+---
+
+## Getting Started
+
+### Development Server
+Run `ng serve` to start the development server at `http://localhost:4200/`. The application will reload automatically on file changes.
+
+### Build
+Run `ng build` to build the project. The build artifacts will be stored in the `/dist` directory.
+
+### Code Scaffolding
 Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Build
+### Unit Tests
+Run `ng test` to execute unit tests via [Karma](https://karma-runner.github.io).
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+### End-to-End Tests
+Run `ng e2e` to execute end-to-end tests with a suitable testing package.
 
-## Running unit tests
+---
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Issues & Solutions
 
-## Running end-to-end tests
+- **State Management**: BehaviorSubject for state handling.
+- **Performance**: Implemented lazy loading and OnPush change detection.
+- **Scalability**: Utilized Angular Workspace for modularity.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+---
 
-## Further help
+## Conclusion
+ArtoviaApp is designed to be modular, scalable, and user-friendly, leveraging Angular's modern features for an optimized web application experience. This documentation serves to guide developers in understanding and maintaining the project.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
