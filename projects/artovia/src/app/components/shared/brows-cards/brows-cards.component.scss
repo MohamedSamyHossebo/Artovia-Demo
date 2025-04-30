@@ -56,6 +56,7 @@
     0% {
         opacity: 0;
         transform: translateX(-100px);
+        overflow: hidden !important;
     }
 
     100% {
@@ -68,20 +69,29 @@
     // نضيف دول مع الخصائص القديمة
     opacity: 0;
     transform: translateX(-100px);
+    overflow: hidden !important;
 
     &.animate {
         animation: slideFromLeft 0.8s forwards ease-out;
+        overflow: hidden !important;
     }
 }
 
 .card {
     &.animate {
         animation: slideFromLeft 0.8s forwards ease-out;
+        overflow: hidden !important;
 
         @for $i from 1 through 10 {
             &:nth-child(#{$i}) {
                 animation-delay: #{$i * 0.3}s;
             }
         }
+    }
+}
+@media (max-width: 768px) {
+    .collections{
+        display: flex;
+        flex-direction: column !important;
     }
 }

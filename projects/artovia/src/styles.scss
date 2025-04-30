@@ -53,6 +53,12 @@ body.rtl .dropdown-menu {
     border-bottom: 1px solid $dark-border !important;
 }
 
+.dark-mode .navbar-toggler {
+    background-color: $dark-text !important;
+    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%);
+
+}
+
 .dark-mode .navbar hr {
     color: $dark-text !important;
 }

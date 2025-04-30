@@ -6,7 +6,8 @@
     "start": "ng serve",
     "build": "ng build --project=artovia",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "compodoc": "npx compodoc -p tsconfig.compodoc.json -s"
   },
   "private": true,
   "dependencies": {
